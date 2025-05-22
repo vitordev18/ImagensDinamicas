@@ -21,7 +21,7 @@ namespace ImagensDinamicas
         private void btnCarregarFoto_Click(object sender, EventArgs e)
         {
             opdFoto.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp;*.gif|Todos os arquivos|*.*";
-            if (opdFoto.ShowDialog() == DialogResult.OK);
+            if (opdFoto.ShowDialog() == DialogResult.OK)
             {
                 picFoto.Image = Image.FromFile(opdFoto.FileName);
             } else
