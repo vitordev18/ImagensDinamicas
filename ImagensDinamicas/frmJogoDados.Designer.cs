@@ -36,7 +36,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnReiniciar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblPlacar2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDado1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDado2)).BeginInit();
             this.SuspendLayout();
@@ -67,6 +67,7 @@
             this.lblPlacar1.Name = "lblPlacar1";
             this.lblPlacar1.Size = new System.Drawing.Size(81, 63);
             this.lblPlacar1.TabIndex = 2;
+            this.lblPlacar1.Text = "0";
             this.lblPlacar1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblJogador2
@@ -105,6 +106,7 @@
             this.btnReiniciar.TabIndex = 7;
             this.btnReiniciar.Text = "&Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnSair
             // 
@@ -114,23 +116,25 @@
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "&Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // label1
+            // lblPlacar2
             // 
-            this.label1.BackColor = System.Drawing.Color.Moccasin;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(499, 249);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 63);
-            this.label1.TabIndex = 9;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPlacar2.BackColor = System.Drawing.Color.Moccasin;
+            this.lblPlacar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlacar2.Location = new System.Drawing.Point(499, 249);
+            this.lblPlacar2.Name = "lblPlacar2";
+            this.lblPlacar2.Size = new System.Drawing.Size(81, 63);
+            this.lblPlacar2.TabIndex = 9;
+            this.lblPlacar2.Text = "0";
+            this.lblPlacar2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmJogoDados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(677, 433);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblPlacar2);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnReiniciar);
             this.Controls.Add(this.button1);
@@ -141,6 +145,7 @@
             this.Controls.Add(this.picDado1);
             this.Name = "frmJogoDados";
             this.Text = "Jogo de dados CTI";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmJogoDados_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.picDado1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picDado2)).EndInit();
             this.ResumeLayout(false);
@@ -158,6 +163,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnReiniciar;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPlacar2;
     }
 }
