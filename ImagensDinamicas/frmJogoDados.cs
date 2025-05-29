@@ -60,7 +60,7 @@ namespace ImagensDinamicas
             else if (dado1 < dado2)
             {
                 contVitoria2 += 1;
-                lblPlacar2.Text = contVitoria1.ToString();
+                lblPlacar2.Text = contVitoria2.ToString();
             }
             else
             {
