@@ -13,21 +13,30 @@ namespace ImagensDinamicas
     public partial class frmMenu : Form
     {
         public frmMenu()
-        {
+        {   
             InitializeComponent();
-            DialogResult dialogResult = MessageBox.Show("Boas-vindas", "Clique na imagem do jogo que deseja e coloque o nome dos jogaroes",
-                            MessageBoxButtons.OK, 
-                            MessageBoxIcon.Information);
+            MessageBox.Show(
+                "Clique na imagem do jogo que deseja e coloque o nome dos jogadores",
+                "Boas-vindas",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information
+            );
         }
 
         private void picDados_Click_1(object sender, EventArgs e)
         {
-            
+            frmJogoDados frmJogo = new frmJogoDados();
+            this.Hide();
+            frmJogo.ShowDialog();
+            this.Show();
         }
 
         private void picFotos_Click(object sender, EventArgs e)
         {
-
+            frmCarregaFoto frmFotos = new frmCarregaFoto();
+            this.Hide();
+            frmFotos.ShowDialog();
+            this.Show();
         }
     }
 }

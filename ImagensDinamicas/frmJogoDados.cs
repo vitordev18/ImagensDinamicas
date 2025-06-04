@@ -35,16 +35,15 @@ namespace ImagensDinamicas
             this.Close();
         }
 
-        private void frmJogoDados_FormClosed(object sender, FormClosedEventArgs e)
+        private void frmJogoDados_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result;
-            result = MessageBox.Show("Deseja realmente sair ?",
-                                     "Jogo de Dados CTI",
-                                     MessageBoxButtons.YesNo,
-                                     MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
+            DialogResult result = MessageBox.Show("Deseja realmente sair ?",
+                                                  "Jogo de Dados CTI",
+                                                  MessageBoxButtons.YesNo,
+                                                  MessageBoxIcon.Question);
+            if (result == DialogResult.No)
             {
-                e.Cancel = false;
+                e.Cancel = true;
             }
         }
 
@@ -71,11 +70,19 @@ namespace ImagensDinamicas
             }
         }
 
-        private int SorteioDado (PictureBox dado)
+        private int SorteioDado(PictureBox dado)
         {
             int valorDado = Sorteio.Next(1, 7);
-            String arquivoDado = ".\\Imagens\\dado" + valorDado.ToString() + ".jpg";
-            dado.Image = Image.FromFile(arquivoDado);
+            string arquivoDado = ".\\Imagens\\dado" + valorDado.ToString() + ".jpg";
+            if (System.IO.File.Exists(arquivoDado))
+            {
+                dado.Image = Image.FromFile(arquivoDado);
+            }
+            else
+            {
+                MessageBox.Show($"Imagem não encontrada: {arquivoDado}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dado.Image = null;
+            }
             return valorDado;
         }
     }
