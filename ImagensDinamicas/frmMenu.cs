@@ -26,6 +26,7 @@ namespace ImagensDinamicas
         private void picDados_Click_1(object sender, EventArgs e)
         {
             frmJogoDados frmJogo = new frmJogoDados();
+            frmJogo.SetNomesJogadores(txtJog1.Text, txtJog2.Text);
             this.Hide();
             frmJogo.ShowDialog();
             this.Show();
@@ -34,9 +35,15 @@ namespace ImagensDinamicas
         private void picFotos_Click(object sender, EventArgs e)
         {
             frmCarregaFoto frmFotos = new frmCarregaFoto();
+            frmFotos.SetNomesJogadores(txtJog1.Text, txtJog2.Text);
             this.Hide();
             frmFotos.ShowDialog();
             this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

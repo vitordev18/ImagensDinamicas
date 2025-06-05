@@ -27,7 +27,12 @@ namespace ImagensDinamicas
 
         private void btnReiniciar_Click(object sender, EventArgs e)
         {
-
+            contVitoria1 = 0;
+            contVitoria2 = 0;
+            lblPlacar1.Text = "0";
+            lblPlacar2.Text = "0";
+            picDado1.Image = null;
+            picDado2.Image = null;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -84,6 +89,12 @@ namespace ImagensDinamicas
                 dado.Image = null;
             }
             return valorDado;
+        }
+
+        public void SetNomesJogadores(string nome1, string nome2)
+        {
+            lblJogador1.Text = nome1;
+            lblJogador2.Text = nome2;
         }
     }
 }

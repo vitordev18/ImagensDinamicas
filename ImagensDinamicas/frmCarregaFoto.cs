@@ -29,5 +29,11 @@ namespace ImagensDinamicas
                 picFoto.Image = null;
             }
         }
+
+        public void SetNomesJogadores(string nome1, string nome2)
+        {
+            textBox1.Text = nome1;
+            textBox2.Text = nome2;
+        }
     }
 }
