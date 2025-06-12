@@ -13,13 +13,14 @@ namespace ImagensDinamicas
 {
     public partial class frmJogoDados : Form
     {
-
-        int contVitoria1 = 0, contVitoria2 = 0;
+        int contVitoria1 = 0;
+        int contVitoria2 = 0;
 
         Random Sorteio = new Random();
 
-        int dado1, dado2;
-        
+        int dado1;
+        int dado2;
+
         public frmJogoDados()
         {
             InitializeComponent();
@@ -43,9 +44,9 @@ namespace ImagensDinamicas
         private void frmJogoDados_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Deseja realmente sair ?",
-                                                  "Jogo de Dados CTI",
-                                                  MessageBoxButtons.YesNo,
-                                                  MessageBoxIcon.Question);
+                                                    "Jogo de Dados CTI",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
             if (result == DialogResult.No)
             {
                 e.Cancel = true;
@@ -56,11 +57,12 @@ namespace ImagensDinamicas
         {
             dado1 = SorteioDado(picDado1);
             dado2 = SorteioDado(picDado2);
+
             if (dado1 > dado2)
             {
                 contVitoria1 += 1;
                 lblPlacar1.Text = contVitoria1.ToString();
-            } 
+            }
             else if (dado1 < dado2)
             {
                 contVitoria2 += 1;
@@ -78,7 +80,8 @@ namespace ImagensDinamicas
         private int SorteioDado(PictureBox dado)
         {
             int valorDado = Sorteio.Next(1, 7);
-            string arquivoDado = ".\\Imagens\\dado" + valorDado.ToString() + ".jpg";
+            string arquivoDado = $".\\Imagens\\dado{valorDado}.jpg";
+
             if (System.IO.File.Exists(arquivoDado))
             {
                 dado.Image = Image.FromFile(arquivoDado);

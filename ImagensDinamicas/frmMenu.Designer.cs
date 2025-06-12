@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.picFotos = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.lblPlacarJog1 = new System.Windows.Forms.Label();
+            this.lblPlacarJog2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picDados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picFotos)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +47,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(242, 225);
+            this.label1.Location = new System.Drawing.Point(201, 225);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(242, 256);
+            this.label2.Location = new System.Drawing.Point(201, 256);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 1;
@@ -62,14 +64,14 @@
             // 
             // txtJog1
             // 
-            this.txtJog1.Location = new System.Drawing.Point(305, 222);
+            this.txtJog1.Location = new System.Drawing.Point(264, 222);
             this.txtJog1.Name = "txtJog1";
             this.txtJog1.Size = new System.Drawing.Size(100, 20);
             this.txtJog1.TabIndex = 2;
             // 
             // txtJog2
             // 
-            this.txtJog2.Location = new System.Drawing.Point(305, 253);
+            this.txtJog2.Location = new System.Drawing.Point(264, 253);
             this.txtJog2.Name = "txtJog2";
             this.txtJog2.Size = new System.Drawing.Size(100, 20);
             this.txtJog2.TabIndex = 3;
@@ -128,12 +130,30 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "Fotos";
             // 
+            // lblPlacarJog1
+            // 
+            this.lblPlacarJog1.AutoSize = true;
+            this.lblPlacarJog1.Location = new System.Drawing.Point(386, 225);
+            this.lblPlacarJog1.Name = "lblPlacarJog1";
+            this.lblPlacarJog1.Size = new System.Drawing.Size(0, 13);
+            this.lblPlacarJog1.TabIndex = 10;
+            // 
+            // lblPlacarJog2
+            // 
+            this.lblPlacarJog2.AutoSize = true;
+            this.lblPlacarJog2.Location = new System.Drawing.Point(386, 256);
+            this.lblPlacarJog2.Name = "lblPlacarJog2";
+            this.lblPlacarJog2.Size = new System.Drawing.Size(0, 13);
+            this.lblPlacarJog2.TabIndex = 11;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(622, 379);
+            this.Controls.Add(this.lblPlacarJog2);
+            this.Controls.Add(this.lblPlacarJog1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.picFotos);
             this.Controls.Add(this.label3);
@@ -163,5 +183,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox picFotos;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblPlacarJog1;
+        private System.Windows.Forms.Label lblPlacarJog2;
     }
 }
